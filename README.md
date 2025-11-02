@@ -15,9 +15,14 @@ An adventure game inspired by classics like Metroid and Castlevania: Symphony of
 - ✅ Game manager singleton for global state
 - ✅ Input system (movement, attack, special abilities)
 - ✅ Basic level structure
+- ✅ Tobias character implementation with all abilities
+- ✅ Demolition/force mechanics (crowbar, hammer, explosives)
+- ✅ Sledgehammer combat system with charging
+- ✅ Environmental obstacles (sealed doors, weak walls, blocked passages)
+- ✅ Vine cutting mechanics
 
 ### To Be Implemented
-- [ ] Character-specific abilities and mechanics
+- [ ] Female archaeologist character abilities
 - [ ] Enemy AI and combat system
 - [ ] Animation sprites (currently using colored rectangles as placeholders)
 - [ ] Metroidvania progression system (upgrades, locked areas)
@@ -25,18 +30,38 @@ An adventure game inspired by classics like Metroid and Castlevania: Symphony of
 - [ ] Level design and tilemap system
 - [ ] Sound effects and music
 - [ ] UI/HUD system
+- [ ] Camera shake effects
+- [ ] Particle effects for abilities
 
 ## Characters
 
-### Male Archaeologist (Jack)
-- **Basic Attack:** TBD
-- **Special Combat Ability:** TBD
-- **Special Non-Combat Ability:** TBD
+### Tobias "Toby" Bradshaw (Male Archaeologist)
+**Appearance:** Red hair and full beard, glasses, plaid shirt, sturdy build
+**Archetype:** Practical field archaeologist with a hands-on approach
+**Playstyle:** Heavy-hitting, demolition expert, slower but powerful
 
-### Female Archaeologist (Diana)
-- **Basic Attack:** TBD
-- **Special Combat Ability:** TBD
-- **Special Non-Combat Ability:** TBD
+**Abilities:**
+- **Shared Ability:** Vine Cutting (Machete) - Cut through jungle vines blocking paths
+- **Basic Attack:** Machete swings (15 damage)
+- **Combat Special:** Sledgehammer
+  - Hold K to charge, release to attack
+  - Damage scales 50-100% based on charge time
+  - Fully charged: 30 damage + knockback + area effect
+  - Slower cooldown (1.5s) but devastating impact
+- **Non-Combat Special - Demolition/Force Tools:**
+  - **Crowbar:** Pry open sealed doors and locked crates
+  - **Hammer:** Break through weak/cracked walls
+  - **Explosives:** Clear blocked passages and heavy debris
+
+**Unique Mechanics:**
+- Slightly slower movement speed (90 vs 100)
+- Context-sensitive tool usage (approach obstacle, press L)
+- Charge-based heavy attack system
+- Environmental puzzle solving through force
+
+### Female Archaeologist (TBD)
+- **Name:** TBD
+- **Abilities:** TBD (Coming soon!)
 
 ## Project Structure
 
@@ -82,9 +107,9 @@ didactic-engine/
 ### Controls
 - **Movement:** WASD or Arrow Keys
 - **Jump:** Space or W
-- **Attack:** J key
-- **Special Combat:** K key
-- **Special Non-Combat:** L key
+- **Basic Attack:** J key (Machete)
+- **Special Combat:** K key (Hold to charge Sledgehammer for Tobias)
+- **Special Non-Combat:** L key (Context-sensitive demolition tools for Tobias)
 
 ### Architecture
 

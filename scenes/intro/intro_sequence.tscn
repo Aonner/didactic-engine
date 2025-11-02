@@ -41,7 +41,7 @@ position = Vector2(100, 50)
 offset_left = -8.0
 offset_top = -16.0
 offset_right = 8.0
-color = Color(0.2, 0.4, 0.8, 1)
+color = Color(0.8, 0.3, 0.2, 1)
 
 [node name="FemaleArchaeologist" type="Node2D" parent="."]
 position = Vector2(130, 50)
@@ -115,7 +115,7 @@ offset_right = 60.0
 offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "Male Archaeologist (Jack)"
+text = "Tobias \"Toby\" Bradshaw"
 
 [node name="FemaleButton" type="Button" parent="SelectionUI"]
 layout_mode = 1

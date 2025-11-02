@@ -12,25 +12,43 @@ enum CharacterType {
 var selected_character: CharacterType = CharacterType.MALE_ARCHAEOLOGIST
 var character_selected: bool = false
 
-# Character names (customize these!)
+# Character names
 var character_names = {
-	CharacterType.MALE_ARCHAEOLOGIST: "Jack",
-	CharacterType.FEMALE_ARCHAEOLOGIST: "Diana"
+	CharacterType.MALE_ARCHAEOLOGIST: "Tobias",
+	CharacterType.FEMALE_ARCHAEOLOGIST: "Diana"  # TBD
+}
+
+# Character nicknames
+var character_nicknames = {
+	CharacterType.MALE_ARCHAEOLOGIST: "Toby",
+	CharacterType.FEMALE_ARCHAEOLOGIST: ""  # TBD
+}
+
+# Character descriptions
+var character_descriptions = {
+	CharacterType.MALE_ARCHAEOLOGIST: "Practical field archaeologist with a hands-on approach. Red hair, full beard, glasses, plaid shirt.",
+	CharacterType.FEMALE_ARCHAEOLOGIST: ""  # TBD
 }
 
 # Progression tracking
 var abilities_unlocked: Dictionary = {
 	CharacterType.MALE_ARCHAEOLOGIST: {
-		"basic_attack": true,
-		"special_combat": false,
-		"special_noncombat": false
+		# Tobias "Toby" Bradshaw abilities
+		"vine_cutting": true,           # Shared: Machete for cutting vines
+		"crowbar": false,               # Non-Combat: Pry open sealed doors/crates
+		"hammer": false,                # Non-Combat: Break weak walls
+		"explosives": false,            # Non-Combat: Small charges for blocked passages
+		"sledgehammer": false,          # Combat: Heavy/powerful melee attacks
 	},
 	CharacterType.FEMALE_ARCHAEOLOGIST: {
-		"basic_attack": true,
-		"special_combat": false,
-		"special_noncombat": false
+		"vine_cutting": true,           # Shared ability
+		"special_combat": false,        # TBD
+		"special_noncombat": false      # TBD
 	}
 }
+
+# Tool/weapon inventory (what player currently has equipped)
+var current_tool: String = "machete"  # Default tool
 
 # Game state
 var current_health: int = 100
